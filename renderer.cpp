@@ -10,7 +10,6 @@ BarRenderer::BarRenderer(sf::RenderWindow &window, int arrSize): ArrayRenderer(w
     auto dimensions=window.getSize();
     barWidth=(float)dimensions.x/arrSize;
     barHeight=(float)dimensions.y/(arrSize+1);
-    //std::cout << barHeight << std::endl;
 }
 BarRenderer::~BarRenderer(){
 
