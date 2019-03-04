@@ -35,9 +35,6 @@ void Application::mainloop(){
                 std::cin.clear();
                 std::cin.ignore(INT_MAX, '\n');
         }
-        //m_window.clear();
-        //m_window.display();
-
     }
 }
 int Application::castInteger(std::string value){
