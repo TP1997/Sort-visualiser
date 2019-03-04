@@ -55,7 +55,6 @@ void sortArray::draw(int count, ...){
     draw(specials);
 }
 void sortArray::draw(std::vector<int> &vec){
-    //if(m_window.isOpen()){
     delay();
     m_window.clear();
     for(unsigned int n=0; n<array.size(); n++){
@@ -68,7 +67,6 @@ void sortArray::draw(std::vector<int> &vec){
     }
     m_window.display();
     handleWinEvents();
-//}
 }
 void sortArray::paint(){
     unsigned int count=0;
