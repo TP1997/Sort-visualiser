@@ -20,13 +20,11 @@ void Algorihms::bubbleSort(sortArray &array){
 
 void Algorihms::insertionSort(sortArray &array){
     array.delayTime=10;
-    //std::vector<int> shifts;
     for(int n=1; n<array.size(); n++){
         int temp=array[n];
         int newpos=n;
         while(newpos>0 && temp<array[newpos-1]){
             array[newpos]=array[newpos-1];
-            //shifts.push_back(newpos);
             array.draw(2, newpos, newpos-1);
             newpos--;
         }
@@ -91,14 +89,10 @@ void Algorihms::shellSort(sortArray &array){
             int newpos=n;
             while(newpos>=gap && temp<array[newpos-gap]){
                 array[newpos]=array[newpos-gap];
-                //shifts.push_back(newpos);
                 array.draw(2, newpos, newpos-1);
                 newpos-=gap;
             }
             array[newpos]=temp;
-            //array.draw(1, newpos);
-            //array.draw(shifts);
-            //shifts.clear();
         }
     }
 }
@@ -130,13 +124,11 @@ void Algorihms::cocktailSort(sortArray &array){
                 array.draw(2, n, n-1);
             }
         }
-        //array.draw(0);
         start++;
     }
 }
 
 void Algorihms::heapify(sortArray &array, int i, int last){
-    //help indecies
     int largest=i;
     int leftChildIdx=i*2+1;
     int rightChildIdx=i*2+2;
@@ -189,7 +181,6 @@ void Algorihms::quickSort(sortArray &array, int l, int r){
     if(l<r){
         int pivot=partition(array, l, r);
         quickSort(array, l, pivot-1);
-        //array.draw(0);
         quickSort(array, pivot+1, r);
     }
 }
