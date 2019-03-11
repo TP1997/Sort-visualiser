@@ -1,4 +1,4 @@
-# Sort-visualiser
+# Sort visualiser
 Visualisation of few common sorting algorithms.
 * Bubble sort
 * Insertion sort
